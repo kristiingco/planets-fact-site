@@ -1,8 +1,45 @@
-import logo from "./logo.svg";
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Switch, Navigate } from "react-router-dom";
 import "./App.css";
+import Planet from "./components/planet/Planet";
 
 function App() {
-  return <div className="App"></div>;
+  const [data, setData] = useState([]);
+
+  const getData = () => {
+    fetch("data.json")
+      .then((res) => {
+        console.log(res);
+        return res.json();
+      })
+      .then((myJson) => {
+        console.log(myJson);
+
+        setData(myJson);
+      });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/mercury" />} />
+        {data.map((planet) => {
+          console.log(planet.name);
+          return (
+            <Route
+              key={planet.name}
+              path={`/${planet.name.toLowerCase()}`}
+              element={<Planet data={planet} />}
+            />
+          );
+        })}
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
