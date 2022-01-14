@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Switch, Navigate } from "react-router-dom";
 import "./App.css";
+import Navigation from "./components/navigation/Navigation";
 import Planet from "./components/planet/Planet";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navigation data={data} />
       <Routes>
         <Route path="/" element={<Navigate replace to="/mercury" />} />
         {data.map((planet) => {
