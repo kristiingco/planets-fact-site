@@ -7,40 +7,70 @@ const Planet = ({ data }) => {
   const location = useLocation();
   let [descContent, setDescContent] = useState(data.overview.content);
   let [descSource, setDescSource] = useState(data.overview.source);
+  let [image, setImage] = useState(
+    `assets/planet-${data.name.toLowerCase()}.svg`
+  );
+  let [showGeology, setShowGeology] = useState(false);
   useEffect(() => {
     console.log("Location changed");
     setDescContent(data.overview.content);
     setDescSource(data.overview.source);
+    setImage(`assets/planet-${data.name.toLowerCase()}.svg`);
   }, [location]);
 
-  const changeContent = (content, source) => {
+  const changeContent = (content, source, img, showGeology) => {
     setDescContent(content);
     setDescSource(source);
+    setImage(img);
+    setShowGeology(showGeology);
   };
   return (
     <div>
       {data.name}
       <button
         onClick={() => {
-          changeContent(data.overview.content, data.overview.source);
+          changeContent(
+            data.overview.content,
+            data.overview.source,
+            `assets/planet-${data.name.toLowerCase()}.svg`,
+            false
+          );
         }}
       >
         Overview
       </button>
       <button
         onClick={() => {
-          changeContent(data.structure.content, data.structure.source);
+          changeContent(
+            data.structure.content,
+            data.structure.source,
+            `assets/planet-${data.name.toLowerCase()}-internal.svg`,
+            false
+          );
         }}
       >
         Structure
       </button>
       <button
         onClick={() => {
-          changeContent(data.geology.content, data.geology.source);
+          changeContent(
+            data.geology.content,
+            data.geology.source,
+            `assets/planet-${data.name.toLowerCase()}.svg`,
+            true
+          );
         }}
       >
         Geology
       </button>
+      <img src={image} alt={`${data.name}`} />
+
+      {showGeology && (
+        <img
+          src={`assets/geology-${data.name.toLowerCase()}.png`}
+          alt={`${data.name}`}
+        />
+      )}
       <PlanetDescription content={descContent} source={descSource} />
       <PlanetStatistics
         rotation={data.rotation}
