@@ -26,43 +26,44 @@ const Planet = ({ data }) => {
   };
   return (
     <div>
-      {data.name}
-      <button
-        onClick={() => {
-          changeContent(
-            data.overview.content,
-            data.overview.source,
-            `assets/planet-${data.name.toLowerCase()}.svg`,
-            false
-          );
-        }}
-      >
-        Overview
-      </button>
-      <button
-        onClick={() => {
-          changeContent(
-            data.structure.content,
-            data.structure.source,
-            `assets/planet-${data.name.toLowerCase()}-internal.svg`,
-            false
-          );
-        }}
-      >
-        Structure
-      </button>
-      <button
-        onClick={() => {
-          changeContent(
-            data.geology.content,
-            data.geology.source,
-            `assets/planet-${data.name.toLowerCase()}.svg`,
-            true
-          );
-        }}
-      >
-        Geology
-      </button>
+      <div>
+        <button
+          onClick={() => {
+            changeContent(
+              data.overview.content,
+              data.overview.source,
+              `assets/planet-${data.name.toLowerCase()}.svg`,
+              false
+            );
+          }}
+        >
+          Overview
+        </button>
+        <button
+          onClick={() => {
+            changeContent(
+              data.structure.content,
+              data.structure.source,
+              `assets/planet-${data.name.toLowerCase()}-internal.svg`,
+              false
+            );
+          }}
+        >
+          Structure
+        </button>
+        <button
+          onClick={() => {
+            changeContent(
+              data.geology.content,
+              data.geology.source,
+              `assets/planet-${data.name.toLowerCase()}.svg`,
+              true
+            );
+          }}
+        >
+          Geology
+        </button>
+      </div>
       <img src={image} alt={`${data.name}`} />
 
       {showGeology && (
@@ -71,7 +72,11 @@ const Planet = ({ data }) => {
           alt={`${data.name}`}
         />
       )}
-      <PlanetDescription content={descContent} source={descSource} />
+      <PlanetDescription
+        name={data.name}
+        content={descContent}
+        source={descSource}
+      />
       <PlanetStatistics
         rotation={data.rotation}
         revolution={data.revolution}
