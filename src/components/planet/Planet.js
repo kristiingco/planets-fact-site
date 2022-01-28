@@ -12,6 +12,8 @@ const Planet = ({ data }) => {
     `assets/planet-${data.name.toLowerCase()}.svg`
   );
   let [showGeology, setShowGeology] = useState(false);
+  let [active, setActive] = useState("overview");
+
   useEffect(() => {
     console.log("Location changed");
     setDescContent(data.overview.content);
@@ -20,46 +22,59 @@ const Planet = ({ data }) => {
     setShowGeology(false);
   }, [location]);
 
-  const changeContent = (content, source, img, showGeology) => {
+  const changeContent = (content, source, img, showGeology, active) => {
     setDescContent(content);
     setDescSource(source);
     setImage(img);
     setShowGeology(showGeology);
+    setActive(active);
   };
   return (
     <div>
-      <div>
+      <div className="buttons-mobile">
         <button
+          className={`${
+            active === "overview" ? "active" : ""
+          } active-${data.name.toLowerCase()}`}
           onClick={() => {
             changeContent(
               data.overview.content,
               data.overview.source,
               `assets/planet-${data.name.toLowerCase()}.svg`,
-              false
+              false,
+              "overview"
             );
           }}
         >
           Overview
         </button>
         <button
+          className={`${
+            active === "structure" ? "active" : ""
+          } active-${data.name.toLowerCase()}`}
           onClick={() => {
             changeContent(
               data.structure.content,
               data.structure.source,
               `assets/planet-${data.name.toLowerCase()}-internal.svg`,
-              false
+              false,
+              "structure"
             );
           }}
         >
           Structure
         </button>
         <button
+          className={`${
+            active === "geology" ? "active" : ""
+          } active-${data.name.toLowerCase()}`}
           onClick={() => {
             changeContent(
               data.geology.content,
               data.geology.source,
               `assets/planet-${data.name.toLowerCase()}.svg`,
-              true
+              true,
+              "geology"
             );
           }}
         >
