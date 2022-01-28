@@ -20,6 +20,7 @@ const Planet = ({ data }) => {
     setDescSource(data.overview.source);
     setImage(`assets/planet-${data.name.toLowerCase()}.svg`);
     setShowGeology(false);
+    setActive("overview");
   }, [location]);
 
   const changeContent = (content, source, img, showGeology, active) => {
