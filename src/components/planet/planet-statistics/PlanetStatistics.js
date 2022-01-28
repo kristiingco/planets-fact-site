@@ -1,23 +1,24 @@
 import React from "react";
+import "./PlanetStatistics.scss";
 
 const PlanetStatistics = ({ rotation, revolution, radius, temperature }) => {
   return (
     <div>
-      <div>
-        <span>Rotation Time</span>
-        <span>{rotation}</span>
+      <div className="planet-statistics">
+        <span className="planet-statistics-type">Rotation Time</span>
+        <span className="planet-statistics-number">{rotation}</span>
       </div>
-      <div>
-        <span>Revolution Time</span>
-        <span>{revolution}</span>
+      <div className="planet-statistics">
+        <span className="planet-statistics-type">Revolution Time</span>
+        <span className="planet-statistics-number">{revolution}</span>
       </div>
-      <div>
-        <span>Radius</span>
-        <span>{radius}</span>
+      <div className="planet-statistics">
+        <span className="planet-statistics-type">Radius</span>
+        <span className="planet-statistics-number">{radius}</span>
       </div>
-      <div>
-        <span>Average Temp.</span>
-        <span>{temperature}</span>
+      <div className="planet-statistics">
+        <span className="planet-statistics-type">Average Temp.</span>
+        <span className="planet-statistics-number">{temperature}</span>
       </div>
     </div>
   );

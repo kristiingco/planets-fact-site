@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Antonio;
+    src: url("../public/fonts/Antonio.ttf");
+}
+
+@font-face {
+    font-family: Spartan;
+    src: url("../public/fonts/Spartan.ttf");
+}
+
 * {
     box-sizing: border-box;
 }
