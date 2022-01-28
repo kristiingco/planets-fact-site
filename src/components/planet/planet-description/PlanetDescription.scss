@@ -1,0 +1,40 @@
+.planet-description {
+    display: flex;
+    flex-direction: column;
+    margin: 28px;
+    align-items: center;
+    font-family: Spartan;
+
+    .planet-description-header {
+        font-family: Antonio;
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+
+    .planet-description-content {
+        text-align: center;
+        font-size: 11px;
+        line-height: 22px;
+    }
+
+    .planet-description-source {
+        font-size: 12px;
+        opacity: 0.5;
+
+    }
+
+    .planet-description-source a {
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .planet-description-source img {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        left: 4px;
+        top: 2px;
+        
+    }
+}
