@@ -1,0 +1,12 @@
+.planet-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: -10px;
+    
+    .planet-geology-image {
+       position: absolute;
+       width: 15%;
+
+    }
+}

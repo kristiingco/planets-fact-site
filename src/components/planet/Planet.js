@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Planet.scss";
 import { useLocation } from "react-router-dom";
 import PlanetDescription from "./planet-description/PlanetDescription";
 import PlanetStatistics from "./planet-statistics/PlanetStatistics";
@@ -16,6 +17,7 @@ const Planet = ({ data }) => {
     setDescContent(data.overview.content);
     setDescSource(data.overview.source);
     setImage(`assets/planet-${data.name.toLowerCase()}.svg`);
+    setShowGeology(false);
   }, [location]);
 
   const changeContent = (content, source, img, showGeology) => {
@@ -64,14 +66,24 @@ const Planet = ({ data }) => {
           Geology
         </button>
       </div>
-      <img src={image} alt={`${data.name}`} />
-
-      {showGeology && (
+      <div className="planet-images">
         <img
-          src={`assets/geology-${data.name.toLowerCase()}.png`}
+          className="planet-main-image"
+          src={image}
           alt={`${data.name}`}
+          style={{ width: data.width }}
         />
-      )}
+
+        {showGeology && (
+          <img
+            className="planet-geology-image"
+            src={`assets/geology-${data.name.toLowerCase()}.png`}
+            alt={`${data.name}`}
+            style={{ marginTop: data.geologyPosition }}
+          />
+        )}
+      </div>
+
       <PlanetDescription
         name={data.name}
         content={descContent}
