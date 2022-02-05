@@ -4,7 +4,7 @@
     left: 0;
     position: absolute;
     top: 75px;
-    background:#070724;
+    background: #070724;
     height: 100%;
     z-index: 99999;
     -webkit-box-shadow: 0px 15px 15px -9px rgba(0,0,0,1); 
@@ -90,15 +90,66 @@
         
 
     }
-
-    
-
   
 }
 
-
 .toggle-menu {
     display: none;
+}
+
+@media all and (min-width: 630px) {
+    .toggle-menu {
+        display: block;
+    }
+
+    .navigation-list { 
+        position: relative;
+        flex-direction: row;
+        margin: 27px 0px;
+        top: 0;
+        -webkit-box-shadow: none; 
+        box-shadow: none;
+
+        .navigation-links {
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0;
+
+            .navigation-link {
+                padding: 0;
+            }
+            
+
+            .dot {
+                display: none;
+            }
+
+            .navigation-link-planet {
+               
+                border: none;
+                padding: 0;
+
+                .navigation-link-chevron {
+                    display: none;
+                }
+            }
+
+            .navigation-link-planet-info {
+                .navigation-planet-name {
+                    margin-left: 0px;
+                    font-size: 11px;
+                }
+
+                
+            }
+
+         
+        }
+        
+    }
+
+    
+
 }
 
 
