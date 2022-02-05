@@ -7,149 +7,132 @@
     background: #070724;
     height: 100%;
     z-index: 99999;
-    -webkit-box-shadow: 0px 15px 15px -9px rgba(0,0,0,1); 
-    box-shadow: 0px 15px 15px -9px rgba(0,0,0,1);
-    
-}
-
-.navigation-links {
+    -webkit-box-shadow: 0px 15px 15px -9px rgba(0, 0, 0, 1);
+    box-shadow: 0px 15px 15px -9px rgba(0, 0, 0, 1);
+  }
+  
+  .navigation-links {
     display: flex;
     flex-direction: column;
     margin-top: 44px;
-   
+  
     .dot {
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        display: inline-block;
-        background-color: #bbb;
-        padding: 0;
-    }
-
-    .dot-mercury {
-        background-color: #DEF4FC;
-    }
-
-    .dot-venus {
-        background-color: #F7CC7F;
-    }
-
-    .dot-earth {
-        background-color: #545BFE;
-    }
-
-    .dot-mars {
-        background-color: #FF6A45;
-    }
-
-    .dot-jupiter {
-        background-color: #ECAD7A;
-    }
-
-    .dot-saturn {
-        background-color: #FCCB6B;
-    }
-
-    .dot-uranus {
-        background-color: #65F0D5;
-    }
-
-    .dot-neptune {
-        background-color: #497EFA;
-    }
-
-    .navigation-link {
-        padding: 0PX 24px;
-    }
-
-    .navigation-link-planet {
-        text-decoration: none;
-        color: #ffffff;
-        text-transform: uppercase;
-        font-family: Spartan;
- 
-      
-        font-size: 15px;
-      
-        display: flex;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-
-        .navigation-link-planet-info {
-            display: flex;
-            align-items: center;
-
-            .navigation-planet-name {
-                margin-left: 24px;
-                font-weight: 700;
-            }
-        }
-
-        
-
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #bbb;
+      padding: 0;
     }
   
-}
-
-.toggle-menu {
-    display: none;
-}
-
-@media all and (min-width: 630px) {
-    .toggle-menu {
-        display: block;
+    .dot-mercury {
+      background-color: #def4fc;
     }
-
-    .navigation-list { 
-        position: relative;
-        flex-direction: row;
-        margin: 27px 0px;
-        top: 0;
-        -webkit-box-shadow: none; 
-        box-shadow: none;
-
-        .navigation-links {
-            flex-direction: row;
-            justify-content: space-around;
-            margin: 0;
-
-            .navigation-link {
-                padding: 0;
-            }
-            
-
-            .dot {
-                display: none;
-            }
-
-            .navigation-link-planet {
-               
-                border: none;
-                padding: 0;
-
-                .navigation-link-chevron {
-                    display: none;
-                }
-            }
-
-            .navigation-link-planet-info {
-                .navigation-planet-name {
-                    margin-left: 0px;
-                    font-size: 11px;
-                }
-
-                
-            }
-
-         
+  
+    .dot-venus {
+      background-color: #f7cc7f;
+    }
+  
+    .dot-earth {
+      background-color: #545bfe;
+    }
+  
+    .dot-mars {
+      background-color: #ff6a45;
+    }
+  
+    .dot-jupiter {
+      background-color: #ecad7a;
+    }
+  
+    .dot-saturn {
+      background-color: #fccb6b;
+    }
+  
+    .dot-uranus {
+      background-color: #65f0d5;
+    }
+  
+    .dot-neptune {
+      background-color: #497efa;
+    }
+  
+    .navigation-link {
+      padding: 0px 24px;
+    }
+  
+    .navigation-link-planet {
+      text-decoration: none;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-family: Spartan;
+  
+      font-size: 15px;
+  
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+  
+      .navigation-link-planet-info {
+        display: flex;
+        align-items: center;
+  
+        .navigation-planet-name {
+          margin-left: 24px;
+          font-weight: 700;
         }
-        
+      }
     }
-
-    
-
-}
-
-
+  }
+  
+  .toggle-menu {
+    display: none;
+  }
+  
+  @media all and (min-width: 630px) {
+    .toggle-menu {
+      display: block;
+    }
+  
+    .navigation-list {
+      position: relative;
+      flex-direction: row;
+      margin: 27px 0px;
+      top: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+  
+      .navigation-links {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+  
+        .navigation-link {
+          padding: 0;
+        }
+  
+        .dot {
+          display: none;
+        }
+  
+        .navigation-link-planet {
+          border: none;
+          padding: 0;
+  
+          .navigation-link-chevron {
+            display: none;
+          }
+        }
+  
+        .navigation-link-planet-info {
+          .navigation-planet-name {
+            margin-left: 0px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+  
