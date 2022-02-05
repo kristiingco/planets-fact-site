@@ -1,0 +1,28 @@
+.navigation {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0px 28px;
+}
+
+.navigation-header {
+
+    font-family: Antonio;
+    font-size: 28px;
+    font-weight: normal;
+   
+}
+
+.navigation img {
+    cursor: pointer;
+    object-fit: contain;
+}
+
+
+
+
+
+
