@@ -3,7 +3,7 @@ import "./PlanetStatistics.scss";
 
 const PlanetStatistics = ({ rotation, revolution, radius, temperature }) => {
   return (
-    <div>
+    <div className="planet-statistics-list">
       <div className="planet-statistics">
         <span className="planet-statistics-type">Rotation Time</span>
         <span className="planet-statistics-number">{rotation}</span>
