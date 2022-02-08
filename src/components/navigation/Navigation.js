@@ -20,11 +20,11 @@ const Navigation = ({ data }) => {
   };
 
   return (
-    <div className="navigation">
+    <header className="navigation">
       <h2 className="navigation-header">The Planets</h2>{" "}
       <img src="/assets/icon-hamburger.svg" alt="menu" onClick={openOrClose} />
       <NavigationList data={data} toggle={toggle} />
-    </div>
+    </header>
   );
 };
 

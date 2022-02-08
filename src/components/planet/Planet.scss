@@ -1,58 +1,60 @@
+button {
+    background: none;
+    border: none;
+    color: rgba(255,255,255, 0.5);
+    padding: 20px 4px;
+    font-family: Spartan;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1.92857px;
+}
+
 .buttons-mobile {
-  
     width: 100%;
     display: flex;
     border-bottom: 1px solid rgba(255,255,255, 0.5);
     justify-content: space-evenly;
-    button {
-        background: none;
-        border: none;
-        color: rgba(255,255,255, 0.5);
-        padding: 20px 4px;
-        font-family: Spartan;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 9px;
-        letter-spacing: 1.92857px;
-    }
 
-    .active {
-        border-bottom: 4px solid;
-        color: #ffffff;
-        
-    }
+    
+.active {
+    border-bottom: 4px solid;
+    color: #ffffff;
+    
+}
 
-    .active-mercury {
-        border-color: #419EBB;
-    }
+.active-mercury {
+    border-color: #419EBB;
+}
 
-    .active-venus {
-        border-color: #EDA249;
-    }
+.active-venus {
+    border-color: #EDA249;
+}
 
-    .active-earth {
-        border-color: #6D2ED5;
-    }
+.active-earth {
+    border-color: #6D2ED5;
+}
 
-    .active-mars {
-        border-color: #D14C32;
-    }
+.active-mars {
+    border-color: #D14C32;
+}
 
-    .active-jupiter {
-        border-color: #D83A34;
-    }
+.active-jupiter {
+    border-color: #D83A34;
+}
 
-    .active-saturn {
-        border-color: #CD5120;
-    }
+.active-saturn {
+    border-color: #CD5120;
+}
 
-    .active-uranus {
-        border-color: #1EC1A2;
+.active-uranus {
+    border-color: #1EC1A2;
 
-    }
-    .active-neptune {
-        border-color: #2D68F0;
-    }
+}
+.active-neptune {
+    border-color: #2D68F0;
+}
+   
 }
 
 .planet-images {
@@ -66,4 +68,99 @@
        position: absolute;
        width: 15%;
     }
+}
+
+div > .planet-header {
+    margin: 100px 0px 0px 0px;
+    text-align: center;
+}
+
+.planet-header {
+    font-family: Antonio;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+
+.buttons-non-mobile {
+    display: none;
+}
+
+@media all and (min-width: 630px) {
+    .planet-content-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 40px;
+    }
+
+    div > .planet-header {
+        text-align: left;
+        margin-left: 40px;
+
+    }
+
+    .buttons-mobile {
+        display: none;
+    }
+
+    button {
+        display: flex;
+        padding: 12px 28px;
+        margin-bottom: 23px;
+    }
+
+    button span:last-of-type {
+        margin-left: 17px;
+        color: #ffffff;
+    }
+
+    .buttons-non-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+        .active {
+            border: none;
+            background-color: none;
+        }
+        
+        .active.active-mercury {
+            background-color: #419EBB;
+        }
+        
+        .active.active-venus {
+            background-color: #EDA249;
+        }
+        
+        .active.active-earth {
+            background-color: #6D2ED5;
+        }
+        
+        .active.active-mars {
+            background-color: #D14C32;
+        }
+        
+        .active.active-jupiter {
+            background-color: #D83A34;
+        }
+        
+        .active.active-saturn {
+            background-color: #CD5120;
+        }
+        
+        .active.active-uranus {
+            background-color: #1EC1A2;
+        
+        }
+        .active.active-neptune {
+            background-color: #2D68F0;
+        }
+    
+    }
+
+   
+   
+ 
+
 }

@@ -99,12 +99,67 @@ const Planet = ({ data }) => {
           />
         )}
       </div>
+      <div>
+        <h1 className="planet-header">{data.name}</h1>
+      </div>
+      <div className="planet-content-container">
+        <PlanetDescription content={descContent} source={descSource} />
 
-      <PlanetDescription
-        name={data.name}
-        content={descContent}
-        source={descSource}
-      />
+        <div className="buttons-non-mobile">
+          <button
+            className={`${
+              active === "overview" ? "active" : ""
+            } active-${data.name.toLowerCase()}`}
+            onClick={() => {
+              changeContent(
+                data.overview.content,
+                data.overview.source,
+                `assets/planet-${data.name.toLowerCase()}.svg`,
+                false,
+                "overview"
+              );
+            }}
+          >
+            <span>01</span>
+            <span>Overview</span>
+          </button>
+          <button
+            className={`${
+              active === "structure" ? "active" : ""
+            } active-${data.name.toLowerCase()}`}
+            onClick={() => {
+              changeContent(
+                data.structure.content,
+                data.structure.source,
+                `assets/planet-${data.name.toLowerCase()}-internal.svg`,
+                false,
+                "structure"
+              );
+            }}
+          >
+            <span>02</span>
+            <span>Internal Structure</span>
+          </button>
+          <button
+            className={`${
+              active === "geology" ? "active" : ""
+            } active-${data.name.toLowerCase()}`}
+            onClick={() => {
+              changeContent(
+                data.geology.content,
+                data.geology.source,
+                `assets/planet-${data.name.toLowerCase()}.svg`,
+                true,
+                "geology"
+              );
+            }}
+          >
+            <span>03</span>
+            <span>Surface Geology</span>
+          </button>
+        </div>
+      </div>
+
       <PlanetStatistics
         rotation={data.rotation}
         revolution={data.revolution}
