@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Planet.scss";
 import { useLocation } from "react-router-dom";
+import PlanetButtons from "./planet-buttons/PlanetButtons";
 import PlanetDescription from "./planet-description/PlanetDescription";
 import PlanetStatistics from "./planet-statistics/PlanetStatistics";
 
@@ -32,56 +33,12 @@ const Planet = ({ data }) => {
   };
   return (
     <div>
-      <div className="buttons-mobile">
-        <button
-          className={`${
-            active === "overview" ? "active" : ""
-          } active-${data.name.toLowerCase()}`}
-          onClick={() => {
-            changeContent(
-              data.overview.content,
-              data.overview.source,
-              `assets/planet-${data.name.toLowerCase()}.svg`,
-              false,
-              "overview"
-            );
-          }}
-        >
-          Overview
-        </button>
-        <button
-          className={`${
-            active === "structure" ? "active" : ""
-          } active-${data.name.toLowerCase()}`}
-          onClick={() => {
-            changeContent(
-              data.structure.content,
-              data.structure.source,
-              `assets/planet-${data.name.toLowerCase()}-internal.svg`,
-              false,
-              "structure"
-            );
-          }}
-        >
-          Structure
-        </button>
-        <button
-          className={`${
-            active === "geology" ? "active" : ""
-          } active-${data.name.toLowerCase()}`}
-          onClick={() => {
-            changeContent(
-              data.geology.content,
-              data.geology.source,
-              `assets/planet-${data.name.toLowerCase()}.svg`,
-              true,
-              "geology"
-            );
-          }}
-        >
-          Geology
-        </button>
-      </div>
+      <PlanetButtons
+        data={data}
+        isMobile={true}
+        isActive={active}
+        changeContent={changeContent}
+      />
       <div className="planet-images">
         <img
           className="planet-main-image"
@@ -105,59 +62,12 @@ const Planet = ({ data }) => {
       <div className="planet-content-container">
         <PlanetDescription content={descContent} source={descSource} />
 
-        <div className="buttons-non-mobile">
-          <button
-            className={`${
-              active === "overview" ? "active" : ""
-            } active-${data.name.toLowerCase()}`}
-            onClick={() => {
-              changeContent(
-                data.overview.content,
-                data.overview.source,
-                `assets/planet-${data.name.toLowerCase()}.svg`,
-                false,
-                "overview"
-              );
-            }}
-          >
-            <span>01</span>
-            <span>Overview</span>
-          </button>
-          <button
-            className={`${
-              active === "structure" ? "active" : ""
-            } active-${data.name.toLowerCase()}`}
-            onClick={() => {
-              changeContent(
-                data.structure.content,
-                data.structure.source,
-                `assets/planet-${data.name.toLowerCase()}-internal.svg`,
-                false,
-                "structure"
-              );
-            }}
-          >
-            <span>02</span>
-            <span>Internal Structure</span>
-          </button>
-          <button
-            className={`${
-              active === "geology" ? "active" : ""
-            } active-${data.name.toLowerCase()}`}
-            onClick={() => {
-              changeContent(
-                data.geology.content,
-                data.geology.source,
-                `assets/planet-${data.name.toLowerCase()}.svg`,
-                true,
-                "geology"
-              );
-            }}
-          >
-            <span>03</span>
-            <span>Surface Geology</span>
-          </button>
-        </div>
+        <PlanetButtons
+          data={data}
+          isMobile={false}
+          isActive={active}
+          changeContent={changeContent}
+        />
       </div>
 
       <PlanetStatistics
