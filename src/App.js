@@ -6,7 +6,7 @@ import {
   useHistory,
   useLocation,
 } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Navigation from "./components/navigation/Navigation";
 import Planet from "./components/planet/Planet";
 
