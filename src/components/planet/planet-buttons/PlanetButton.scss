@@ -1,3 +1,14 @@
+$mercury-color: #419EBB;
+$venus-color: #EDA249;
+$earth-color: #6D2ED5;
+$mars-color: #D14C32;
+$jupiter-color: #D83A34;
+$saturn-color: #CD5120;
+$uranus-color: #1EC1A2;
+$neptune-color: #2D68F0;
+
+
+
 button {
     background: none;
     border: none;
@@ -18,35 +29,35 @@ button {
 }
 
 .active.active-mercury {
-    border-color: #419EBB;
+    border-color: $mercury-color;
 }
 
 .active.active-venus {
-    border-color: #EDA249;
+    border-color: $venus-color;
 }
 
 .active.active-earth {
-    border-color: #6D2ED5;
+    border-color: $earth-color;
 }
 
 .active.active-mars {
-    border-color: #D14C32;
+    border-color: $mars-color;
 }
 
 .active.active-jupiter {
-    border-color: #D83A34;
+    border-color: $jupiter-color;
 }
 
 .active.active-saturn {
-    border-color: #CD5120;
+    border-color: $saturn-color;
 }
 
 .active.active-uranus {
-    border-color: #1EC1A2;
-
+    border-color: $uranus-color;
 }
+
 .active.active-neptune {
-    border-color: #2D68F0;
+    border-color: $neptune-color;
 }
    
 @media all and (min-width: 630px) {
@@ -68,35 +79,35 @@ button {
     }
     
     .active.active-mercury {
-        background-color: #419EBB;
+        background-color: $mercury-color;
     }
     
     .active.active-venus {
-        background-color: #EDA249;
+        background-color: $venus-color;
     }
     
     .active.active-earth {
-        background-color: #6D2ED5;
+        background-color: $earth-color;
     }
     
     .active.active-mars {
-        background-color: #D14C32;
+        background-color: $mars-color;
     }
     
     .active.active-jupiter {
-        background-color: #D83A34;
+        background-color: $jupiter-color;
     }
     
     .active.active-saturn {
-        background-color: #CD5120;
+        background-color: $saturn-color;
     }
     
     .active.active-uranus {
-        background-color: #1EC1A2;
+        background-color: $uranus-color;
     
     }
     .active.active-neptune {
-        background-color: #2D68F0;
+        background-color: $neptune-color;
     }
 
 }
