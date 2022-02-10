@@ -32,9 +32,11 @@
     }
 }
 
+@media all and (min-width: 1300px) {
+    .navigation {
+        flex-direction: row;
+    }
 
 
-
-
-
+}
 
