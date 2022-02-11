@@ -22,11 +22,12 @@ div > .planet-header {
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 16px;
+    text-transform: uppercase;
 }
 
 @media all and (min-width: 630px) {
     .planet-content-container {
-        display: flex;
+        display: inline-flex;
         justify-content: space-between;
         margin: 0px 40px;
     }
@@ -34,8 +35,50 @@ div > .planet-header {
     div > .planet-header {
         text-align: left;
         margin-left: 40px;
-
     }
 
+
+}
+
+@media all and (min-width: 1200px) {
+.planet-information-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.planet-images {
+    width: 80%;
+    .planet-main-image {
+       object-fit: contain;
+    }
+    .planet-geology-image {
+       position: absolute;
+       bottom: calc(100% - 600px);
+       width: 100px;
+       
+    }
+}
+
+.planet-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+div > .planet-header {
+    display: inline-block;
+}
+
+.planet-header {
+    font-size: 80px;
+}
+
+.planet-content-container { 
+    
+    flex-direction: column;
+   
+}
 
 }

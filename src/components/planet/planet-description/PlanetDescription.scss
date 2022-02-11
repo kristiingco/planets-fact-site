@@ -1,5 +1,5 @@
 .planet-description {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     margin: 0px 28px 28px 28px;
     align-items: center;
@@ -43,4 +43,13 @@
         text-align: left;
     }
    
+}
+
+@media all and (min-width: 1200px) {
+    .planet-description {
+        width: 100%;
+    }
+    .planet-description-content {
+        font-size: 14px;
+    }
 }

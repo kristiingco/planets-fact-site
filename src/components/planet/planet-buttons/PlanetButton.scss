@@ -111,3 +111,9 @@ button {
     }
 
 }
+
+@media all and (min-width: 1200px) {
+button {
+    font-size: 14px;
+}
+}

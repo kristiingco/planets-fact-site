@@ -22,3 +22,9 @@
         width: 40%;
     }
 }
+
+@media all and (min-width: 1200px) {
+    .buttons-non-mobile {
+        width: 100%;
+    }
+}
