@@ -30,8 +30,6 @@
     }
 }
 
-
-
 @media all and (min-width: 630px) {
     .planet-statistics-list {
         flex-direction: row;
@@ -52,5 +50,13 @@
         .planet-statistics:last-of-type {
             margin-right: 0px;
         }
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .planet-statistics-list {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 87px;
     }
 }
