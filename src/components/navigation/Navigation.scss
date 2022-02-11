@@ -34,7 +34,9 @@
 
 @media all and (min-width: 1300px) {
     .navigation {
+        margin-top: 0px;
         flex-direction: row;
+        align-items: center;
     }
 
 
