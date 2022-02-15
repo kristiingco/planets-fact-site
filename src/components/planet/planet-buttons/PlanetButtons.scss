@@ -1,30 +1,29 @@
-
 .buttons-mobile {
     width: 100%;
     display: flex;
-    border-bottom: 1px solid rgba(255,255,255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     justify-content: space-evenly;
-}
-
-.buttons-non-mobile {
+  }
+  
+  .buttons-non-mobile {
     display: none;
-}
-
-@media all and (min-width: 630px) {
-
+  }
+  
+  @media all and (min-width: 630px) {
     .buttons-mobile {
-        display: none;
+      display: none;
     }
-
+  
     .buttons-non-mobile {
-        display: flex;
-        flex-direction: column;
-        width: 40%;
+      display: flex;
+      flex-direction: column;
+      width: 40%;
     }
-}
-
-@media all and (min-width: 1200px) {
+  }
+  
+  @media all and (min-width: 1200px) {
     .buttons-non-mobile {
-        width: 100%;
+      width: 100%;
     }
-}
+  }
+  

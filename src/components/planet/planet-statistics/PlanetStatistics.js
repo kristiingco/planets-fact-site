@@ -8,7 +8,7 @@ const PlanetStatistics = ({ rotation, revolution, radius, temperature }) => {
       <PlanetStatisticsItem text="Rotation Time" data={rotation} />
       <PlanetStatisticsItem text="Revolution Time" data={revolution} />
       <PlanetStatisticsItem text="Radius" data={radius} />
-      <PlanetStatisticsItem text="Average Temp/" data={temperature} />
+      <PlanetStatisticsItem text="Average Temp" data={temperature} />
     </div>
   );
 };

@@ -9,37 +9,36 @@
     padding: 16px 24px;
   
     .planet-statistics-type {
-        font-family: Spartan;
-        font-size: 8px;
-        font-weight: bold;
-        text-transform: uppercase;
-        opacity: 0.5;
-        letter-spacing: 0.727273px;
-        line-height: 16px;
+      font-family: Spartan;
+      font-size: 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      opacity: 0.5;
+      letter-spacing: 0.727273px;
+      line-height: 16px;
     }
-
+  
     .planet-statistics-number {
-        font-family: Antonio;
-        font-size: 20px;
-        line-height: 26px;
-
+      font-family: Antonio;
+      font-size: 20px;
+      line-height: 26px;
     }
-}
-
-@media all and (min-width: 630px) {
-
-        .planet-statistics { 
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 16px;
-            margin-right: 11px;
-            
-            .planet-statistics-number {
-                font-size: 24px;
-            }
-        }
-
-        .planet-statistics:last-of-type {
-            margin-right: 0px;
-        }
-}
+  }
+  
+  @media all and (min-width: 630px) {
+    .planet-statistics {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+      margin-right: 11px;
+  
+      .planet-statistics-number {
+        font-size: 24px;
+      }
+    }
+  
+    .planet-statistics:last-of-type {
+      margin-right: 0px;
+    }
+  }
+  

@@ -7,10 +7,9 @@ const NavigationList = ({ data, toggle }) => {
     <div className={`navigation-list ${toggle}`}>
       <div className="navigation-links">
         {data.map((planet) => (
-          <div className={"navigation-link"}>
+          <div className={"navigation-link"} key={planet.name.toLowerCase()}>
             <Link
               className="navigation-link-planet"
-              key={planet.name.toLowerCase()}
               to={`/${planet.name.toLowerCase()}`}
             >
               <div className="navigation-link-planet-info">

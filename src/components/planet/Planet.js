@@ -17,13 +17,12 @@ const Planet = ({ data }) => {
   let [active, setActive] = useState("overview");
 
   useEffect(() => {
-    console.log("Location changed");
     setDescContent(data.overview.content);
     setDescSource(data.overview.source);
     setImage(`assets/planet-${data.name.toLowerCase()}.svg`);
     setShowGeology(false);
     setActive("overview");
-  }, [location]);
+  }, [data]);
 
   const changeContent = (content, source, img, showGeology, active) => {
     setDescContent(content);
@@ -41,7 +40,7 @@ const Planet = ({ data }) => {
           isActive={active}
           changeContent={changeContent}
         />
-        <div class="planet-information-container">
+        <div className="planet-information-container">
           <div className="planet-images">
             <img
               className="planet-main-image"
@@ -59,7 +58,7 @@ const Planet = ({ data }) => {
               />
             )}
           </div>
-          <div class="planet-text-container">
+          <div className="planet-text-container">
             <div>
               <h1 className="planet-header">{data.name}</h1>
             </div>
