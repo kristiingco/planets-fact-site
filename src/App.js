@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import {
   Routes,
@@ -30,23 +31,25 @@ function App() {
     getData();
   }, []);
 
-  useLocation();
+  let location = useLocation();
   return (
     <div className="App">
       <Navigation data={data} />
-      <Routes>
-        <Route path="/" element={<Navigate replace to="/mercury" />} />
-        {data.map((planet) => {
-          console.log(planet.name);
-          return (
-            <Route
-              key={planet.name}
-              path={`/${planet.name.toLowerCase()}`}
-              element={<Planet data={planet} />}
-            />
-          );
-        })}
-      </Routes>
+      <AnimatePresence exitBeforeEnter>
+        <Routes key={location.pathname} location={location}>
+          <Route path="/" element={<Navigate replace to="/mercury" />} />
+          {data.map((planet) => {
+            console.log(planet.name);
+            return (
+              <Route
+                key={planet.name}
+                path={`/${planet.name.toLowerCase()}`}
+                element={<Planet data={planet} />}
+              />
+            );
+          })}
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import PlanetButtons from "./planet-buttons/PlanetButtons";
 import PlanetDescription from "./planet-description/PlanetDescription";
 import PlanetStatistics from "./planet-statistics/PlanetStatistics";
+import AnimatedPage from "../AnimatedPage";
 
 const Planet = ({ data }) => {
   const location = useLocation();
@@ -32,55 +33,57 @@ const Planet = ({ data }) => {
     setActive(active);
   };
   return (
-    <div>
-      <PlanetButtons
-        data={data}
-        isMobile={true}
-        isActive={active}
-        changeContent={changeContent}
-      />
-      <div class="planet-information-container">
-        <div className="planet-images">
-          <img
-            className="planet-main-image"
-            src={image}
-            alt={`${data.name}`}
-            style={{ width: data.width }}
-          />
-
-          {showGeology && (
+    <AnimatedPage>
+      <div>
+        <PlanetButtons
+          data={data}
+          isMobile={true}
+          isActive={active}
+          changeContent={changeContent}
+        />
+        <div class="planet-information-container">
+          <div className="planet-images">
             <img
-              className="planet-geology-image"
-              src={`assets/geology-${data.name.toLowerCase()}.png`}
+              className="planet-main-image"
+              src={image}
               alt={`${data.name}`}
-              style={{ marginTop: data.geologyPosition }}
+              style={{ width: data.width }}
             />
-          )}
-        </div>
-        <div class="planet-text-container">
-          <div>
-            <h1 className="planet-header">{data.name}</h1>
-          </div>
 
-          <div className="planet-content-container">
-            <PlanetDescription content={descContent} source={descSource} />
+            {showGeology && (
+              <img
+                className="planet-geology-image"
+                src={`assets/geology-${data.name.toLowerCase()}.png`}
+                alt={`${data.name}`}
+                style={{ marginTop: data.geologyPosition }}
+              />
+            )}
+          </div>
+          <div class="planet-text-container">
+            <div>
+              <h1 className="planet-header">{data.name}</h1>
+            </div>
 
-            <PlanetButtons
-              data={data}
-              isMobile={false}
-              isActive={active}
-              changeContent={changeContent}
-            />
+            <div className="planet-content-container">
+              <PlanetDescription content={descContent} source={descSource} />
+
+              <PlanetButtons
+                data={data}
+                isMobile={false}
+                isActive={active}
+                changeContent={changeContent}
+              />
+            </div>
           </div>
         </div>
+        <PlanetStatistics
+          rotation={data.rotation}
+          revolution={data.revolution}
+          radius={data.radius}
+          temperature={data.temperature}
+        />
       </div>
-      <PlanetStatistics
-        rotation={data.rotation}
-        revolution={data.revolution}
-        radius={data.radius}
-        temperature={data.temperature}
-      />
-    </div>
+    </AnimatedPage>
   );
 };
 
