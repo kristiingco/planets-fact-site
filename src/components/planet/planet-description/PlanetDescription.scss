@@ -5,57 +5,53 @@
     align-items: center;
     font-family: Spartan;
     text-align: center;
-
-    
+  
     .planet-description-content {
-        
-        font-size: 11px;
-        line-height: 22px;
+      font-size: 11px;
+      line-height: 22px;
     }
-
+  
     .planet-description-source {
-        font-size: 12px;
-        opacity: 0.5;
-        margin-top: 32px;
+      font-size: 12px;
+      opacity: 0.5;
+      margin-top: 32px;
     }
-
+  
     .planet-description-source a {
-        font-weight: bold;
-        color: #ffffff;
+      font-weight: bold;
+      color: #ffffff;
     }
-
+  
     .planet-description-source img {
-        position: relative;
-        width: 12px;
-        height: 12px;
-        left: 4px;
-        top: 2px;
-        
+      position: relative;
+      width: 12px;
+      height: 12px;
+      left: 4px;
+      top: 2px;
     }
-}
-
-@media all and (min-width: 630px) {
+  }
+  
+  @media all and (min-width: 630px) {
     .planet-description {
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 50%;
-        align-items: flex-start;
-        text-align: left;
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 50%;
+      align-items: flex-start;
+      text-align: left;
     }
-   
-}
-
-@media all and (min-width: 1200px) {
+  }
+  
+  @media all and (min-width: 1200px) {
     .planet-description {
-        width: 100%;
-
-        .planet-description-content {
-            font-size: 14px;
-        }
-
-        .planet-description-source {
-            margin-top: 10px;
-        }
+      width: 100%;
+  
+      .planet-description-content {
+        font-size: 14px;
+      }
+  
+      .planet-description-source {
+        margin-top: 10px;
+      }
     }
-   
-}
+  }
+  

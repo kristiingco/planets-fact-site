@@ -1,84 +1,77 @@
-
 .planet-images {
     display: flex;
     justify-content: center;
     margin-top: 70px;
     margin-bottom: -10px;
-    
-    
+  
     .planet-geology-image {
-       position: absolute;
-       width: 15%;
+      position: absolute;
+      width: 15%;
     }
-}
-
-div > .planet-header {
+  }
+  
+  div > .planet-header {
     margin: 100px 0px 0px 0px;
     text-align: center;
-}
-
-.planet-header {
+  }
+  
+  .planet-header {
     font-family: Antonio;
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 16px;
     text-transform: uppercase;
-}
-
-@media all and (min-width: 630px) {
+  }
+  
+  @media all and (min-width: 630px) {
     .planet-content-container {
-        display: inline-flex;
-        justify-content: space-between;
-        margin: 0px 40px;
+      display: inline-flex;
+      justify-content: space-between;
+      margin: 0px 40px;
     }
-
+  
     div > .planet-header {
-        text-align: left;
-        margin-left: 40px;
+      text-align: left;
+      margin-left: 40px;
     }
-
-
-}
-
-@media all and (min-width: 1200px) {
-.planet-information-container {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-around;
-}
-
-.planet-images {
-    width: 80%;
-    .planet-main-image {
-       object-fit: contain;
+  }
+  
+  @media all and (min-width: 1200px) {
+    .planet-information-container {
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      justify-content: space-around;
     }
-    .planet-geology-image {
-       position: absolute;
-       bottom: calc(100% - 600px);
-       width: 100px;
-       
+  
+    .planet-images {
+      width: 80%;
+      .planet-main-image {
+        object-fit: contain;
+      }
+      .planet-geology-image {
+        position: absolute;
+        bottom: calc(100% - 600px);
+        width: 100px;
+      }
     }
-}
-
-.planet-text-container {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
-
-div > .planet-header {
-    display: inline-block;
-}
-
-.planet-header {
-    font-size: 80px;
-}
-
-.planet-content-container { 
-    
-    flex-direction: column;
-   
-}
-
-}
+  
+    .planet-text-container {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+    }
+  
+    div > .planet-header {
+      display: inline-block;
+    }
+  
+    .planet-header {
+      font-size: 80px;
+    }
+  
+    .planet-content-container {
+      flex-direction: column;
+    }
+  }
+  

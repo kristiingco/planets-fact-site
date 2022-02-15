@@ -1,12 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import {
-  Routes,
-  Route,
-  Navigate,
-  useHistory,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import "./App.scss";
 import Navigation from "./components/navigation/Navigation";
 import Planet from "./components/planet/Planet";
@@ -17,12 +11,9 @@ function App() {
   const getData = () => {
     fetch("data.json")
       .then((res) => {
-        console.log(res);
         return res.json();
       })
       .then((myJson) => {
-        console.log(myJson);
-
         setData(myJson);
       });
   };
@@ -39,7 +30,6 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Navigate replace to="/mercury" />} />
           {data.map((planet) => {
-            console.log(planet.name);
             return (
               <Route
                 key={planet.name}

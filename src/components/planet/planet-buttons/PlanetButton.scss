@@ -1,125 +1,118 @@
-$mercury-color: #419EBB;
-$venus-color: #EDA249;
-$earth-color: #6D2ED5;
-$mars-color: #D14C32;
-$jupiter-color: #D83A34;
-$saturn-color: #CD5120;
-$uranus-color: #1EC1A2;
-$neptune-color: #2D68F0;
-
-
+$mercury-color: #419ebb;
+$venus-color: #eda249;
+$earth-color: #6d2ed5;
+$mars-color: #d14c32;
+$jupiter-color: #d83a34;
+$saturn-color: #cd5120;
+$uranus-color: #1ec1a2;
+$neptune-color: #2d68f0;
 
 button {
-    background: none;
-    border: none;
-    color: rgba(255,255,255, 0.5);
-    padding: 20px 4px;
-    font-family: Spartan;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 9px;
-    letter-spacing: 2px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 20px 4px;
+  font-family: Spartan;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
-
 .active {
-    border-bottom: 4px solid;
-    color: #ffffff;
-    
+  border-bottom: 4px solid;
+  color: #ffffff;
 }
 
 .active.active-mercury {
-    border-color: $mercury-color;
+  border-color: $mercury-color;
 }
 
 .active.active-venus {
-    border-color: $venus-color;
+  border-color: $venus-color;
 }
 
 .active.active-earth {
-    border-color: $earth-color;
+  border-color: $earth-color;
 }
 
 .active.active-mars {
-    border-color: $mars-color;
+  border-color: $mars-color;
 }
 
 .active.active-jupiter {
-    border-color: $jupiter-color;
+  border-color: $jupiter-color;
 }
 
 .active.active-saturn {
-    border-color: $saturn-color;
+  border-color: $saturn-color;
 }
 
 .active.active-uranus {
-    border-color: $uranus-color;
+  border-color: $uranus-color;
 }
 
 .active.active-neptune {
-    border-color: $neptune-color;
+  border-color: $neptune-color;
 }
-   
+
 @media all and (min-width: 630px) {
-    button {
-        display: flex;
-        align-items: baseline;
-        padding: 12px 28px;
-        margin-bottom: 23px;
-        border: 1px solid rgba(255,255,255, 0.5);
-    }
+  button {
+    display: flex;
+    align-items: baseline;
+    padding: 12px 28px;
+    margin-bottom: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
 
-    button span:last-of-type {
-        margin-left: 17px;
-        color: #ffffff;
-    }
-    
-    .active {
-        background-color: none;
-    }
-    
-    .active.active-mercury {
-        background-color: $mercury-color;
-    }
-    
-    .active.active-venus {
-        background-color: $venus-color;
-    }
-    
-    .active.active-earth {
-        background-color: $earth-color;
-    }
-    
-    .active.active-mars {
-        background-color: $mars-color;
-    }
-    
-    .active.active-jupiter {
-        background-color: $jupiter-color;
-    }
-    
-    .active.active-saturn {
-        background-color: $saturn-color;
-    }
-    
-    .active.active-uranus {
-        background-color: $uranus-color;
-    
-    }
-    .active.active-neptune {
-        background-color: $neptune-color;
-    }
+  button span:last-of-type {
+    margin-left: 17px;
+    color: #ffffff;
+  }
 
+  .active {
+    background-color: none;
+  }
+
+  .active.active-mercury {
+    background-color: $mercury-color;
+  }
+
+  .active.active-venus {
+    background-color: $venus-color;
+  }
+
+  .active.active-earth {
+    background-color: $earth-color;
+  }
+
+  .active.active-mars {
+    background-color: $mars-color;
+  }
+
+  .active.active-jupiter {
+    background-color: $jupiter-color;
+  }
+
+  .active.active-saturn {
+    background-color: $saturn-color;
+  }
+
+  .active.active-uranus {
+    background-color: $uranus-color;
+  }
+  .active.active-neptune {
+    background-color: $neptune-color;
+  }
 }
 
 @media all and (min-width: 1200px) {
-button {
+  button {
     font-size: 12px;
-}
+  }
 
-button:not(.active):hover {
-    background-color: rgba(255,255,255, 0.2);
-}
-
+  button:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }

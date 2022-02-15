@@ -1,20 +1,21 @@
 .planet-statistics-list {
     display: flex;
     flex-direction: column;
-}
-
-@media all and (min-width: 630px) {
+  }
+  
+  @media all and (min-width: 630px) {
     .planet-statistics-list {
-        flex-direction: row;
-        justify-content: center;
-        margin: 0px 40px;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0px 40px;
     }
-}
-
-@media all and (min-width: 1200px) {
+  }
+  
+  @media all and (min-width: 1200px) {
     .planet-statistics-list {
-        width: 75%;
-        margin: 0 auto;
-        margin-top: 87px;
+      width: 75%;
+      margin: 0 auto;
+      margin-top: 87px;
     }
-}
+  }
+  
